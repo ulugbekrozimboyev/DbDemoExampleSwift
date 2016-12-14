@@ -12,14 +12,13 @@ class ModelManager {
 
     static let sharedInstance = ModelManager()
     
-    private var database:FMDatabase
+    private var database: FMDatabase? = nil
     
     //privete init method to singleton
     private init(){
         
-        if(self.database == nil)
-        {
-             self.database = FMDatabase(path: Utility.getPath("Student.sqlite"))
+        if self.database == nil {
+             self.database = FMDatabase(path: Utility.getPath(fileName: "Student.sqlite"))
         }
     }
     
