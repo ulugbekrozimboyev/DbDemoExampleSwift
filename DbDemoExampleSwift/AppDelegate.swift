@@ -16,7 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        Utility.copyFile(fileName: "Student.sqlite")
+//        Utility.copyFile(fileName: "Student.sqlite")
+        
+        let b:Bool = ModelManager.sharedInstance.testConnection()
+        print(b)
+        
+        if !ModelManager.sharedInstance.isExist(tableName: "student_info") {
+            print("creating new table")
+            if ModelManager.sharedInstance.testCreateTable() {
+                print("table was created")
+            } else {
+                print("table was not created")
+            }
+
+        }
+        
         
         return true
     }
