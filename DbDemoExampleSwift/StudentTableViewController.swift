@@ -68,17 +68,24 @@ class StudentTableViewController: UITableViewController {
         self.marrStudentData = ModelManager.sharedInstance.getAllStudentData()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "editSegue")
+    
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        if(identifier == "editSegue")
         {
             let btnEdit : UIButton = sender as! UIButton
             let selectedIndex : Int = btnEdit.tag
-            let viewController : ViewController = segue.destination as! ViewController
+            
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let viewController = storyBoard.instantiateViewController(withIdentifier: "insert") as! ViewController
+            
             viewController.isEdit = true
-            viewController.studentData = (marrStudentData.object(at: selectedIndex) as! Student)
+            viewController.studentData = marrStudentData.object(at: selectedIndex) as! Student
+            
+            self.present(viewController, animated:true, completion:nil)
             
         }
-       
+
     }
 
 }

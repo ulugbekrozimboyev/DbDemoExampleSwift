@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DbDemoExampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="insert" id="BYZ-38-t0r" customClass="ViewController" customModule="DbDemoExampleSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -72,7 +72,7 @@
         <!--Student Data-->
         <scene sceneID="GMM-sh-u2q">
             <objects>
-                <tableViewController title="Student Data" id="xq8-ge-J54" customClass="StudentTableViewController" customModule="DbDemoExampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MainView" title="Student Data" id="xq8-ge-J54" customClass="StudentTableViewController" customModule="DbDemoExampleSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="wL1-FW-Jn1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,6 +152,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4yF-8m-U6t">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CcT-m9-QwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PHf-4r-UV7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IzD-YI-MLD">
@@ -163,7 +164,6 @@
                         <segue destination="xq8-ge-J54" kind="relationship" relationship="rootViewController" id="ITg-OP-eGs"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CcT-m9-QwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.8" y="520.38980509745136"/>
         </scene>
