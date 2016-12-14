@@ -20,6 +20,9 @@
 		BC71B6451E01069E003369BE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC71B63D1E01069E003369BE /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BC71B6461E01069E003369BE /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BC71B63F1E01069E003369BE /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BC71B6471E01069E003369BE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BC71B6421E01069E003369BE /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BC71B64C1E01170A003369BE /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71B64B1E01170A003369BE /* Student.swift */; };
+		BCD5F8DC1E011B200015EED9 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD5F8DB1E011B200015EED9 /* Utility.swift */; };
+		BCD5F8DF1E01432E0015EED9 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD5F8DE1E01432E0015EED9 /* ModelManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		BC71B6401E01069E003369BE /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = fmdb/FMDB.h; sourceTree = "<group>"; };
 		BC71B6411E01069E003369BE /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = fmdb/FMResultSet.h; sourceTree = "<group>"; };
 		BC71B6421E01069E003369BE /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		BC71B64B1E01170A003369BE /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Models/Student.swift; sourceTree = "<group>"; };
+		BCD5F8DB1E011B200015EED9 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		BCD5F8DE1E01432E0015EED9 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelManager.swift; path = Helpers/ModelManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,8 @@
 		BC286D121E00E3AF00FF95FC /* DbDemoExampleSwift */ = {
 			isa = PBXGroup;
 			children = (
+				BCD5F8DD1E0143110015EED9 /* Helpers */,
+				BC71B64D1E011717003369BE /* Models */,
 				BC71B6371E01066D003369BE /* ThirdParty */,
 				BC286D131E00E3AF00FF95FC /* AppDelegate.swift */,
 				BC286D151E00E3AF00FF95FC /* ViewController.swift */,
@@ -87,6 +95,7 @@
 				BC286D1F1E00E3AF00FF95FC /* Info.plist */,
 				BC286D251E00ECEC00FF95FC /* StudentTableViewController.swift */,
 				BC286D271E00EE3300FF95FC /* StudentTableViewCell.swift */,
+				BCD5F8DB1E011B200015EED9 /* Utility.swift */,
 			);
 			path = DbDemoExampleSwift;
 			sourceTree = "<group>";
@@ -115,6 +124,22 @@
 				BC71B6421E01069E003369BE /* FMResultSet.m */,
 			);
 			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		BC71B64D1E011717003369BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC71B64B1E01170A003369BE /* Student.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BCD5F8DD1E0143110015EED9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BCD5F8DE1E01432E0015EED9 /* ModelManager.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +218,9 @@
 				BC286D161E00E3AF00FF95FC /* ViewController.swift in Sources */,
 				BC71B6461E01069E003369BE /* FMDatabaseQueue.m in Sources */,
 				BC286D141E00E3AF00FF95FC /* AppDelegate.swift in Sources */,
+				BCD5F8DC1E011B200015EED9 /* Utility.swift in Sources */,
+				BC71B64C1E01170A003369BE /* Student.swift in Sources */,
+				BCD5F8DF1E01432E0015EED9 /* ModelManager.swift in Sources */,
 				BC286D261E00ECEC00FF95FC /* StudentTableViewController.swift in Sources */,
 				BC71B6431E01069E003369BE /* FMDatabase.m in Sources */,
 				BC71B6451E01069E003369BE /* FMDatabasePool.m in Sources */,
