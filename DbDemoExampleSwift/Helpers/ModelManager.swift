@@ -93,4 +93,11 @@ class ModelManager {
         return isUpdated
     }
     
+    func deleteStudentData(studentInfo: Student) -> Bool {
+        self.database!.open()
+        let isDeleted = self.database!.executeUpdate("DELETE FROM student_info WHERE RollNo=?", withArgumentsIn: [studentInfo.RollNo])
+        self.database!.close()
+        return isDeleted
+    }
+    
 }

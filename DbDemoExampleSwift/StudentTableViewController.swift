@@ -23,6 +23,19 @@ class StudentTableViewController: UITableViewController {
     }
     
     @IBAction func btnDeleteClicked(_ sender: Any) {
+        let btnDelete : UIButton = sender as! UIButton
+        let selectedIndex : Int = btnDelete.tag
+        let studentInfo: Student = marrStudentData.object(at: selectedIndex) as! Student
+        let isDeleted = ModelManager.sharedInstance.deleteStudentData(studentInfo: studentInfo)
+        if isDeleted {
+            //Util.invokeAlertMethod("", strBody: "Record deleted successfully.", delegate: nil)
+            print("Record deleted")
+        } else {
+            //Util.invokeAlertMethod("", strBody: "Error in deleting record.", delegate: nil)
+            print("Error in deleting record.")
+        }
+        self.getStudentData()
+
     }
     
     
