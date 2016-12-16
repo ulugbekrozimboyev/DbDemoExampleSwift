@@ -53,9 +53,9 @@ class ModelManager {
     // test is table exist
     func isExist(tableName name: String) -> Bool {
         self.database!.open()
-        let table = self.database!.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name=?;", withArgumentsIn: [name])
+        let table: FMResultSet! = self.database!.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name=?;", withArgumentsIn: [name])
         self.database!.close()
-        if table != nil {
+        if  table.string(forColumn: "name") ==  name {
             return true
         }
         return false

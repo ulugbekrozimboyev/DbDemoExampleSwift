@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("table was not created")
             }
 
+        } else {
+            print("table already exists")
         }
         
         
